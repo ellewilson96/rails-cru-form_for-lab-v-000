@@ -3,6 +3,10 @@ class ArtistsController < ApplicationController
     @artist = Artist.find(params[:id])
   end
 
+  def new
+    @artist = Artist.new
+  end
+
   def create
     @artist = Artist.new(params.require(:artist))
     @artist.save
